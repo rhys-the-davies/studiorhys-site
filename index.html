@@ -409,30 +409,12 @@ main > section::after {
 /* Photo placeholder — replace with <img> when ready */
 .photo-slot {
   width: 100%;
-  max-height: 420px;
+  max-height: 520px;
   object-fit: cover;
   object-position: top;
   border-radius: var(--radius-sm);
   display: block;
 }
-.photo-slot__noise {
-  position: absolute; inset: 0;
-  background-image:
-    radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
-    repeating-linear-gradient(45deg, transparent 0 2px, rgba(0,0,0,.04) 2px 4px);
-  background-size: 3px 3px, auto;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-}
-.photo-slot__label {
-  position: relative;
-  color: rgba(255,255,255,.85);
-  font-size: 10px;
-  background: rgba(0,0,0,.35);
-  padding: 4px 8px;
-  backdrop-filter: blur(8px);
-}
-
 .photo-caption {
   margin-top: 12px;
   font-size: 12px;
