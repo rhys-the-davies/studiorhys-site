@@ -1,0 +1,16 @@
+# Cloudflare Pages headers - https://developers.cloudflare.com/pages/configuration/headers/
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Fonts never change under the same name, so browsers can keep them for a year
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images, icons and the stylesheet: cache for a week. Rename a file if you replace it and want the change seen straight away.
+/images/*
+  Cache-Control: public, max-age=604800
+/css/*
+  Cache-Control: public, max-age=604800
