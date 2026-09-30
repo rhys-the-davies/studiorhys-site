@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en-GB" data-mode="designed">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rhys Davies CV</title>
+<meta name="description" content="Rhys Davies, product and systems lead in Amsterdam. Curriculum vitae.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Rhys Davies CV">
+<meta property="og:description" content="Product and systems lead in Amsterdam.">
+<meta property="og:image" content="https://studio-rhys.com/og-image-v2.jpg">
+<meta property="og:url" content="https://studio-rhys.com/cv">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico">
+<style>
+/* Fonts: Atkinson Hyperlegible Next, SIL Open Font License (see fonts/). Same files as studio-rhys.com. */
+@font-face{ font-family:'Atkinson Hyperlegible Next'; font-weight:400; font-style:normal; src:url('/fonts/atkinson-hyperlegible-next-latin-400-normal.woff2') format('woff2'); }
+@font-face{ font-family:'Atkinson Hyperlegible Next'; font-weight:600; font-style:normal; src:url('/fonts/atkinson-hyperlegible-next-latin-600-normal.woff2') format('woff2'); }
+@font-face{ font-family:'Atkinson Hyperlegible Next'; font-weight:700; font-style:normal; src:url('/fonts/atkinson-hyperlegible-next-latin-700-normal.woff2') format('woff2'); }
+
+/* Tokens from the live studio-rhys.com/css/style.css */
+:root{
+  --paper:#fdfcfa;
+  --rule:#e9e5db;
+  --ink:#24211c;
+  --ink-soft:#5f594f;
+  --accent:#B54A2A;
+  --accent-soft:#E7C2B4;
+  --pine:#1B5E4F;
+  --pine-deep:#173F35;
+  --pine-tint:#E8F0ED;
+  --sans:'Atkinson Hyperlegible Next', Arial, Helvetica, sans-serif;
+}
+
+*{ box-sizing:border-box; }
+html{ background:#e7e3da; }
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--ink);
+  /* Ligatures off so parsers read "fi", "ff" and "ffi" as letters */
+  font-variant-ligatures:none;
+  font-feature-settings:"liga" 0, "clig" 0, "dlig" 0;
+  -webkit-font-smoothing:antialiased;
+}
+h1, h2, h3, p, ul{ margin:0; padding:0; }
+a{ color:inherit; text-decoration:none; }
+
+/* Screen-only toolbar */
+.toolbar{
+  position:sticky; top:0; z-index:5;
+  display:flex; gap:8px; justify-content:center; align-items:center; flex-wrap:wrap;
+  padding:10px 16px; background:#e7e3da; border-bottom:1px solid #d6d0c3;
+  font:500 14px/1 var(--sans);
+}
+.toolbar button{ font:inherit; cursor:pointer; padding:8px 14px; border-radius:6px; border:1px solid #cfc9bc; background:#fff; color:var(--ink); }
+.toolbar button[aria-pressed="true"]{ background:var(--pine-deep); color:#fff; border-color:var(--pine-deep); }
+.toolbar .group{ display:inline-flex; gap:0; }
+.toolbar .group button:first-child{ border-radius:6px 0 0 6px; }
+.toolbar .group .save{ border-radius:0 6px 6px 0; border-left:0; color:var(--pine-deep); }
+.toolbar .group + .group{ margin-left:12px; }
+
+.page{
+  width:210mm; min-height:297mm; margin:24px auto; background:#fff;
+  box-shadow:0 1px 3px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.06);
+}
+@page{ size:A4; margin:14mm 15mm; }
+html[data-mode="designed"]{ }
+@page designed{ size:A4; margin:0; }
+@media print{
+  html, body{ background:#fff; }
+  .toolbar{ display:none; }
+  .page{ width:auto; min-height:0; margin:0; box-shadow:none; padding:0 !important; background:transparent !important; }
+}
+
+/* ============ Designed version ============
+   Four styles only: title, h1, h2, body. Everything else is body, bold or italic. */
+[data-mode="designed"] .page{ padding:14mm 15mm; background:var(--paper); }
+@media print{
+  html[data-mode="designed"], html[data-mode="designed"] body{ background:var(--paper); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  html[data-mode="designed"] .page{ page:designed; padding:14mm 15mm !important; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+}
+
+/* Body */
+[data-mode="designed"] body{ font-size:9pt; line-height:1.4; color:var(--ink); }
+[data-mode="designed"] strong, [data-mode="designed"] b{ font-weight:600; }
+
+/* Title */
+[data-mode="designed"] .masthead h1{ font-size:24pt; font-weight:600; letter-spacing:-0.02em; line-height:1.1; color:var(--pine-deep); }
+/* H1: section headings */
+[data-mode="designed"] section > h2{ font-size:13pt; font-weight:600; letter-spacing:-0.01em; line-height:1.3; color:var(--pine-deep); }
+/* H2: role headings */
+[data-mode="designed"] .role h3{ font-size:10.5pt; font-weight:600; line-height:1.3; color:var(--pine-deep); }
+
+/* Masthead */
+[data-mode="designed"] .masthead{ display:grid; grid-template-columns:1fr auto; column-gap:8mm; align-items:start; }
+[data-mode="designed"] .tagline{ grid-column:1; font-weight:600; margin-top:1.5mm; }
+[data-mode="designed"] .status{ grid-column:1; }
+[data-mode="designed"] .contact{ grid-column:2; grid-row:1 / span 3; list-style:none; text-align:right; }
+[data-mode="designed"] .contact li{ display:block; }
+[data-mode="designed"] .contact .sep{ display:none; }
+
+/* Sections */
+[data-mode="designed"] section{ margin-top:5mm; }
+[data-mode="designed"] section > h2{ padding-bottom:1.5mm; margin-bottom:3mm; border-bottom:1px solid var(--rule); break-after:avoid; }
+[data-mode="designed"] .profile p + p{ margin-top:1.5mm; }
+
+/* Roles: logo and dates on the left; file order stays heading → dates → body */
+[data-mode="designed"] .role{
+  position:relative; padding:2.6mm 0 2.6mm 40mm; border-top:1px solid var(--rule);
+}
+[data-mode="designed"] .role.keep{ break-inside:avoid; }
+[data-mode="designed"] .role:first-of-type{ border-top:0; padding-top:0; }
+[data-mode="designed"] .role h3{ break-after:avoid; }
+[data-mode="designed"] .role h3 .bar{ color:var(--accent-soft); padding:0 .2em; }
+[data-mode="designed"] .role .meta{ position:absolute; left:0; top:2.6mm; width:34mm; }
+[data-mode="designed"] .role:first-of-type .meta{ top:0; }
+[data-mode="designed"] .role .meta .dates{ display:block; font-weight:600; }
+[data-mode="designed"] .role .meta .sep{ display:none; }
+[data-mode="designed"] .role .meta .place{ display:block; }
+
+[data-mode="designed"] .role .scope{ margin-top:1mm; font-weight:600; }
+[data-mode="designed"] .role .progression{ margin-top:.5mm; font-style:italic; }
+[data-mode="designed"] .role .intro{ margin-top:1mm; break-inside:avoid; }
+[data-mode="designed"] .role ul{ margin-top:1.2mm; padding-left:4mm; }
+[data-mode="designed"] .role li{ margin-top:.4mm; break-inside:avoid; }
+[data-mode="designed"] .role .client{ font-weight:600; }
+
+/* Logos */
+[data-mode="designed"] .role .meta .logo{ display:block; width:26mm; height:7mm; object-fit:contain; object-position:left center; margin-bottom:2mm; }
+[data-mode="designed"] .role .meta .wordmark{ width:auto; height:auto; font-weight:600; line-height:7mm; color:var(--pine-deep); }
+[data-mode="designed"] .role .clients{ display:flex; justify-content:space-around; align-items:center; margin-top:4mm; padding-top:3mm; border-top:1px dashed var(--rule); break-inside:avoid; }
+[data-mode="designed"] .role .client-logo{ display:block; height:8mm; width:auto; max-width:40mm; object-fit:contain; }
+[data-mode="designed"] .role .logo-on-dark{ background:#000; padding:1.6mm 2.6mm; height:8mm; border-radius:3px; }
+
+/* Skills and education rows */
+[data-mode="designed"] .rows{ list-style:none; }
+[data-mode="designed"] .rows li{
+  display:grid; grid-template-columns:34mm 1fr; column-gap:6mm;
+  padding:1.4mm 0; border-top:1px solid var(--rule); break-inside:avoid;
+}
+[data-mode="designed"] .rows li:first-child{ border-top:0; padding-top:0; }
+[data-mode="designed"] .rows .label{ font-weight:600; }
+[data-mode="designed"] .rows .colon{ display:none; }
+[data-mode="designed"] .education .rows li{ grid-template-columns:1fr auto; }
+
+/* ============ Phones: the page reflows on screen, print is unaffected ============ */
+@media screen and (max-width:820px){
+  .page{ width:auto; min-height:0; margin:0; box-shadow:none; padding:24px 16px !important; }
+  .toolbar{ gap:8px; }
+  .toolbar .group + .group{ margin-left:0; }
+  [data-mode] body{ font-size:15px; }
+  [data-mode="designed"] .masthead{ display:block; }
+  [data-mode="designed"] .contact{ text-align:left; margin-top:12px; }
+  [data-mode="designed"] .role{ padding:14px 0; }
+  [data-mode="designed"] .role:first-of-type{ padding-top:0; }
+  [data-mode="designed"] .role .meta{ position:static; width:auto; margin:6px 0 8px; }
+  [data-mode="designed"] .role .meta .dates, [data-mode="designed"] .role .meta .place{ display:inline; }
+  [data-mode="designed"] .role .meta .sep{ display:inline; }
+  [data-mode="designed"] .role .meta .logo{ margin-bottom:6px; }
+  [data-mode="designed"] .role .clients{ flex-wrap:wrap; gap:16px; justify-content:flex-start; }
+  [data-mode="designed"] .rows li, [data-mode="designed"] .education .rows li{ display:block; }
+  [data-mode="designed"] .rows .label{ display:block; }
+}
+
+/* ============ Portal version: plain, single column, same four styles ============ */
+[data-mode="portal"] .page{ padding:14mm 16mm; }
+[data-mode="portal"] body{ font-size:10pt; line-height:1.38; color:#000; }
+[data-mode="portal"] .masthead h1{ font-size:18pt; font-weight:700; }
+[data-mode="portal"] section > h2{ font-size:12.5pt; font-weight:700; border-bottom:1px solid #000; padding-bottom:1mm; margin-bottom:3mm; }
+[data-mode="portal"] .role h3{ font-size:11pt; font-weight:700; }
+[data-mode="portal"] .tagline{ font-weight:700; margin-top:1mm; }
+[data-mode="portal"] .contact{ list-style:none; }
+[data-mode="portal"] .contact li{ display:inline; }
+[data-mode="portal"] section{ margin-top:5mm; }
+[data-mode="portal"] .profile p + p{ margin-top:2mm; }
+[data-mode="portal"] .logo, [data-mode="portal"] .clients{ display:none; }
+[data-mode="portal"] .role{ margin-top:3.5mm; }
+[data-mode="portal"] .role .scope{ font-weight:700; }
+[data-mode="portal"] .role .progression{ font-style:italic; }
+[data-mode="portal"] .role .intro{ margin-top:1mm; }
+[data-mode="portal"] .role ul{ margin-top:1mm; padding-left:5mm; }
+[data-mode="portal"] .role li{ margin-top:.5mm; }
+[data-mode="portal"] .rows{ padding-left:5mm; }
+[data-mode="portal"] .rows li{ margin-top:.8mm; }
+[data-mode="portal"] .rows .label, [data-mode="portal"] .client{ font-weight:700; }
+</style>
+</head>
+<body>
+
+<div class="toolbar" role="toolbar" aria-label="CV version">
+  <span class="group">
+    <button type="button" data-set="designed" aria-pressed="true">Designed</button>
+    <button type="button" class="save" data-save="designed">Save as PDF</button>
+  </span>
+  <span class="group">
+    <button type="button" data-set="portal" aria-pressed="false">Portal</button>
+    <button type="button" class="save" data-save="portal">Save as PDF</button>
+  </span>
+</div>
+
+<main class="page">
+
+  <header class="masthead">
+    <h1>Rhys Davies</h1>
+    <p class="tagline">Product and systems lead</p>
+    <p class="status">Amsterdam, Netherlands · UK citizen with Dutch residence permit</p>
+    <ul class="contact">
+      <li><a href="mailto:rhys@studio-rhys.com">rhys@studio-rhys.com</a><span class="sep"> | </span></li>
+      <li><a href="tel:+31619420567">+31 6 1942 0567</a><span class="sep"> | </span></li>
+      <li><a href="https://studio-rhys.com">studio-rhys.com</a><span class="sep"> | </span></li>
+      <li><a href="https://www.linkedin.com/in/rhys-the-davies">linkedin.com/in/rhys-the-davies</a><span class="sep"> | </span></li>
+      <li><a href="https://github.com/rhys-the-davies">github.com/rhys-the-davies</a></li>
+    </ul>
+  </header>
+
+  <section class="profile">
+    <h2>Profile</h2>
+    <p>I have 7+ years experience in product across open source (Canonical), climate tech (South Pole), sustainability data (Earth Action) and supply chain traceability (AWARE™). I’ve moved from product manager to product lead, hiring and managing a team of product managers to running product and day-to-day ops.</p>
+    <p>Along the way I have secured over €1.8M in grants, doubled revenue on a data product and helped grow a digital climate solutions team from 5 to 30.</p>
+    <p>I also run StudioRhys, an independent product and systems practice I use to work with mission-driven organisations in addition to my main work.</p>
+  </section>
+
+  <section class="experience">
+    <h2>Experience</h2>
+
+    <article class="role">
+      <h3>Technical Product Lead<span class="bar"> | </span><span class="org">AWARE™</span></h3>
+      <p class="meta"><img class="logo" src="/images/logos/aware.svg" alt=""><span class="dates">09/2025 – Present</span><span class="sep"> | </span><span class="place">Amsterdam, Netherlands</span></p>
+      <div class="body">
+        <p class="scope">Sitting next to the founder, I own product and run day-to-day operations: vendors, infrastructure, tech budgets, and cross-country delivery.</p>
+        <p class="intro">AWARE™ gives textile producers ownership of verifiable, batch-level supply chain data by securing it on a blockchain, and working across borders with hundreds of producers in Asia. I joined to take the AWARE™ platform from a working MVP to scale, to prepare the platform for EU Digital Product Passports (DPPs), and an investment round for a rebuild.</p>
+        <ul>
+          <li>Led a whole-app redesign with Amsterdam agency YouSir, from contract review through to final delivery and an investor-ready design pack.</li>
+          <li>Assessed the platform against 106 compliance requirements across 16 textile regulations, including the EU Ecodesign for Sustainable Products Regulation (ESPR), meeting around 81%, with a plan for the five remaining gaps.</li>
+          <li>Ran user research in Tamil Nadu, India, turning field interviews into discovery briefs for a member directory, a data intake product and a trust layer.</li>
+          <li>Launched an impact feature on the Climatiq API that calculates carbon footprints as production data is added.</li>
+          <li>Migrated infrastructure to AWS with load balancing and a dedicated demo environment for sales.</li>
+          <li>Bridged users, sales and a development team in India, running projects across China, India and Bangladesh.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="role keep">
+      <h3>Freelance founder, product and systems consultant<span class="bar"> | </span><span class="org">StudioRhys</span></h3>
+      <p class="meta"><span class="logo wordmark" aria-hidden="true">Studio Rhys</span><span class="dates">07/2025 – Present</span><span class="sep"> | </span><span class="place">Amsterdam, Netherlands</span></p>
+      <div class="body">
+        <p class="intro">StudioRhys is my independent practice helping mission-driven organisations with product, data, AI and operations, working hands-on, in discovery or as an adviser. <a href="https://studio-rhys.com">studio-rhys.com</a></p>
+        <ul>
+          <li><span class="client">Use/Space, Dutch civic-tech platform:</span> technical adviser to the founders. Ran product strategy workshops, challenged their dev partner’s proposal line by line, and built a three-scenario budget model and pitch deck for Rabo Foundation funding.</li>
+          <li><span class="client">Valuing Impact, impact assessment organisation:</span> moved the website off Podia onto owned WordPress infrastructure, set up MailerLite email marketing, forms and Google Analytics 4 with designer Downstairs Design, and handed over with role-specific guides for the CEO and designer.</li>
+          <li><span class="client">Forward Inc, incubator for newcomer entrepreneurs (volunteer, since 03/2025):</span> coach an entrepreneur from idea to investment pitch and judge the programme’s pitch day.</li>
+        </ul>
+        <div class="clients" aria-hidden="true"><img class="logo client-logo" src="/images/logos/usespace.png" alt=""><img class="logo client-logo" src="/images/logos/valuing-impact.svg" alt=""><img class="logo client-logo logo-on-dark" src="/images/logos/forward-inc.svg" alt=""></div>
+      </div>
+    </article>
+
+    <article class="role">
+      <h3>Product Development Manager<span class="bar"> | </span><span class="org">Earth Action SA</span></h3>
+      <p class="meta"><img class="logo" src="/images/logos/earth-action.svg" alt=""><span class="dates">04/2024 – 06/2025</span><span class="sep"> | </span><span class="place">Amsterdam, Netherlands</span></p>
+      <div class="body">
+        <ul>
+          <li>Led the Plasteax team through maintenance, fundraising and development, turning a spreadsheet database with PDF documentation into an online data platform with API integration and contributable online docs.</li>
+          <li>Doubled Plasteax subscriptions and revenue through business development with global FMCG companies (Coca-Cola, Nestlé, Unilever), foundations (Ellen MacArthur Foundation, WWF) and standards bodies (CDP, Consumer Goods Forum).</li>
+          <li>Won two business-critical grants totalling over €1.8M: an InnoVaud innovation project grant in Switzerland and an EIT Food sustainable impact innovation grant with Systemiq.</li>
+          <li>Managed all external technical partners, including software engineers (KLEIS), design agency (Downstairs Design), and technical consultants (Systemiq).</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="role">
+      <h3>Group Product Manager<span class="bar"> | </span><span class="org">South Pole</span></h3>
+      <p class="meta"><img class="logo" src="/images/logos/south-pole.png" alt=""><span class="dates">10/2021 – 03/2024</span><span class="sep"> | </span><span class="place">Amsterdam and London</span></p>
+      <div class="body">
+        <p class="progression">Product Manager 10/2021 · Senior Product Manager 07/2022 · Group Product Manager 01/2023</p>
+        <p class="intro">I joined as South Pole’s only product manager and led the product team through a product-led transition.</p>
+        <ul>
+          <li>Took three new initiatives in greenhouse gas accounting and carbon credits from discovery into development, and created the roadmap for all of South Pole’s digital climate solutions.</li>
+          <li>Grew the team from 5 to 30, hiring designers, developers and practice leads, and hired and managed five product managers.</li>
+          <li>Owned five product roadmaps and their OKRs, and brought product-led practices to non-technical teams across the organisation.</li>
+          <li>Bootstrapped initiatives without a clear home, such as an emission factor database shared by multiple products.</li>
+          <li>Told a lot of stakeholders no.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="role">
+      <h3>Product Manager and Developer Advocate<span class="bar"> | </span><span class="org">Canonical (Ubuntu)</span></h3>
+      <p class="meta"><img class="logo" src="/images/logos/canonical-ubuntu.svg" alt=""><span class="dates">09/2019 – 08/2021</span><span class="sep"> | </span><span class="place">London, United Kingdom</span></p>
+      <div class="body">
+        <p class="progression">Product Manager 09/2019 · Developer Advocate 01/2021</p>
+        <ul>
+          <li>Owned strategy and execution for products ranging from ideation to $10M+ revenue, reporting directly to the CEO.</li>
+          <li>Launched three products (Ubuntu for Raspberry Pi, ESM for ROS and Ubuntu Appliances) and led the release of Ubuntu 20.10.</li>
+          <li>Built partnerships that led to $100k+ flagship deals, and led engagements with the Raspberry Pi Foundation, Flutter, Arm and Open Robotics.</li>
+          <li>Presented at ROS-Industrial, the Linux App Summit and the Singapore Computing Society, and wrote blog posts that increased blog traffic by 400%.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul class="rows">
+      <li><span class="label">Product management<span class="colon">:</span></span> <span>product discovery, user research, roadmapping, OKRs, agile methodologies, prototyping, stakeholder management, data analysis, basic UI/UX design, grant applications, budget modelling, investor materials</span></li>
+      <li><span class="label">Leadership<span class="colon">:</span></span> <span>line management, coaching, hiring, conflict management, managing agencies and external partners</span></li>
+      <li><span class="label">Sustainability and regulation<span class="colon">:</span></span> <span>EU Digital Product Passports (DPP), ESPR, supply chain traceability, GHG accounting, plastic footprints, carbon credits, emission reduction roadmapping, circular economy</span></li>
+      <li><span class="label">Tools and AI<span class="colon">:</span></span> <span>AI process automation, LLM integrations, workflow automation, Notion, Jira, Figma, GitHub, n8n, Make, Power BI, OpenAI API, Claude API, AWS, Cloudflare, WordPress, MailerLite</span></li>
+    </ul>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+    <ul class="rows">
+      <li><span class="label">MEng Mechanical Engineering and Mechatronics, first-class honours<span class="colon"> |</span></span> <span>University of Exeter</span></li>
+      <li><span class="label">BSc Mechatronics Engineering, international distinction<span class="colon"> |</span></span> <span>University of Waterloo</span></li>
+    </ul>
+  </section>
+
+</main>
+
+<script>
+  (function(){
+    var root = document.documentElement;
+    function set(mode){
+      root.setAttribute('data-mode', mode);
+      document.querySelectorAll('[data-set]').forEach(function(b){
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === mode));
+      });
+      document.title = mode === 'portal' ? 'Rhys Davies CV (portal)' : 'Rhys Davies CV';
+    }
+    var q = new URLSearchParams(location.search).get('mode');
+    set(q === 'portal' ? 'portal' : 'designed');
+    document.querySelectorAll('[data-set]').forEach(function(b){
+      b.addEventListener('click', function(){ set(b.getAttribute('data-set')); });
+    });
+    document.querySelectorAll('[data-save]').forEach(function(b){
+      b.addEventListener('click', function(){
+        set(b.getAttribute('data-save'));
+        if (document.fonts && document.fonts.ready) { document.fonts.ready.then(function(){ window.print(); }); }
+        else { window.print(); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
