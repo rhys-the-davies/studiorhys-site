@@ -286,3 +286,16 @@
   .cta-note a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent); }
   .cta-note a:hover{ color:var(--accent); }
   .photo-cap{ font-size:14px; color:var(--ink-soft); margin-top:var(--s-2); }
+  footer a{ color:inherit; text-decoration:none; border-bottom:1px solid currentColor; white-space:nowrap; }
+  footer a:hover{ color:var(--accent); }
+
+  /* POLICY PAGES */
+  .policy{ max-width:var(--measure); }
+  .policy p, .policy li{ font-size:17px; line-height:1.7; }
+  .policy p + p{ margin-top:var(--s-2); }
+  .policy h2{ font-size:20px; margin:var(--s-5) 0 var(--s-2); }
+  .policy ul{ padding-left:1.2em; }
+  .policy li + li{ margin-top:var(--s-2); }
+  .policy a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent); }
+  .policy a:hover{ color:var(--accent); }
+  .policy .updated{ font-size:14.5px; color:var(--ink-soft); }
