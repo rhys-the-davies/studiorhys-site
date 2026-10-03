@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /tavern/
 Allow: /
 
 Sitemap: https://studio-rhys.com/sitemap.xml

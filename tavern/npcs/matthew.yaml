@@ -1,0 +1,119 @@
+# Matthew Owen
+# The id must match this file's name and must never change: table state in Supabase is stored against it.
+# See ../README.md for the full field reference.
+
+id: matthew
+name: Matthew Owen
+short: Matthew
+portrait: portraits/matthew.jpg
+subtitle: Medium humanoid (human), Oath of Devotion paladin, lawful good
+class: Paladin 7
+armour: Plate
+ac: 18
+hp:
+  max: 80
+  formula: 7d10 + 42
+hit_dice:
+  count: 7
+  die: d10
+speed: 30 ft
+proficiency: 3
+passive_perception: 12
+abilities:
+  str: 19
+  dex: 10
+  con: 18
+  int: 10
+  wis: 8
+  cha: 14
+saves:
+  str: 9
+  dex: 2
+  con: 6
+  int: 2
+  wis: 1
+  cha: 7
+save_proficiencies:
+  - str
+  - cha
+save_note: Includes +2 from Aura of Protection.
+details:
+  - label: Skills
+    text: Athletics +7, Intimidation +5, Perception +2, Religion +3, Survival +2
+  - label: Background
+    text: Soldier
+traits:
+  - name: Aura of Protection
+    text: While Matthew is conscious, he and friendly creatures within 10 ft add +2 to their saving throws.
+  - name: Tough
+    text: Human origin feat. His hit point maximum includes +2 per level.
+  - name: Savage Attacker
+    text: Soldier origin feat. Once per turn when he hits with a weapon, he rolls the weapon's damage dice twice and uses either roll.
+actions:
+  - name: Multiattack
+    text: Matthew makes two greatsword attacks.
+  - name: Greatsword
+    text: 'Melee weapon attack: +7 to hit, reach 5 ft, one target. Hit: 11 (2d6 + 4) slashing damage.'
+bonus_actions:
+  - name: Lay on Hands
+    text: Touch a creature and restore hit points from the Lay on Hands pool. Spending 5 points instead removes the poisoned condition.
+  - name: Divine Smite
+    text: Right after hitting with a melee attack, spend a spell slot to deal an extra 2d8 radiant damage, plus 1d8 for each slot level above 1st. Add another 1d8 against a fiend or undead.
+spellcasting:
+  summary: 7th-level paladin
+  ability: Charisma
+  save_dc: 13
+  attack: '+5'
+  slots:
+    '1': 4
+    '2': 3
+  spells:
+    '1':
+      - name: Protection from Evil and Good
+        time: 1 action
+        range: Touch
+        duration: Up to 10 min
+        concentration: true
+        text: Aberrations, celestials, elementals, fey, fiends and undead attack the target with disadvantage. The target can't be charmed, frightened or possessed by them.
+      - name: Shield of Faith
+        time: 1 bonus action
+        range: 60 ft
+        duration: Up to 10 min
+        concentration: true
+        text: One creature gains +2 AC.
+      - name: Cure Wounds
+        time: 1 action
+        range: Touch
+        duration: Instant
+        text: Heal 2d8 + 2. Add 2d8 for each slot level above 1st.
+    '2':
+      - name: Lesser Restoration
+        time: 1 bonus action
+        range: Touch
+        duration: Instant
+        text: 'End one condition on a creature: blinded, deafened, paralysed or poisoned.'
+      - name: Aid
+        time: 1 action
+        range: 30 ft
+        duration: 8 hours
+        text: Up to three creatures gain +5 to their hit point maximum and current hit points. +5 more per slot level above 2nd.
+      - name: Zone of Truth
+        time: 1 action
+        range: 60 ft
+        duration: 10 min
+        text: A 15 ft radius sphere. Creatures inside make a DC 13 Charisma save or can't knowingly lie. Matthew knows who failed.
+interactive:
+  hp: true
+  death_saves: true
+  conditions: true
+  hit_dice: true
+  concentration: true
+  spell_slots: true
+  divine_smite: true
+  pools:
+    - id: loh
+      label: Lay on Hands
+      max: 35
+      rest: long
+  short_rest: true
+  reset: true

@@ -1,0 +1,8 @@
+# NPC files to load, in tab order.
+# A static site can't list a folder, so every NPC file must be named here.
+# Remove a line to hide that NPC. Its saved state stays in Supabase until reset.
+
+- matthew.yaml
+- toro.yaml
+- kessa.yaml
+- telmet.yaml

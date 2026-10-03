@@ -1,0 +1,85 @@
+# Kessa Elston
+# The id must match this file's name and must never change: table state in Supabase is stored against it.
+# See ../README.md for the full field reference.
+
+id: kessa
+name: Kessa Elston
+short: Kessa
+portrait: portraits/kessa.jpg
+subtitle: Medium humanoid (wood elf), fighter, lawful good
+class: Fighter 6
+armour: Studded leather
+ac: 16
+hp:
+  max: 51
+  formula: 6d10 + 18
+hit_dice:
+  count: 6
+  die: d10
+speed: 35 ft
+proficiency: 3
+passive_perception: 13
+abilities:
+  str: 16
+  dex: 18
+  con: 16
+  int: 10
+  wis: 10
+  cha: 12
+saves:
+  str: 6
+  dex: 7
+  con: 6
+  int: 0
+  wis: 0
+  cha: 1
+save_proficiencies:
+  - str
+  - dex
+  - con
+details:
+  - label: Skills
+    text: Acrobatics +7, Athletics +9 (expertise), Perception +3, Survival +3
+  - label: Background
+    text: Sailor
+traits:
+  - name: Brave
+    text: Kessa has advantage on saving throws against being frightened.
+  - name: Improved Critical
+    text: Her weapon attacks and unarmed strikes score a critical hit on a 19 or 20.
+  - name: Action Surge
+    text: Once per short or long rest, Kessa can take one extra action on her turn.
+  - name: Darkvision
+    text: She sees in dim light within 60 ft as if it were bright light, and in darkness as if it were dim light.
+  - name: Fey Ancestry
+    text: She has advantage on saving throws to avoid or end the charmed condition.
+  - name: Keen Senses
+    text: Elven training gives her proficiency in Survival.
+  - name: Trance
+    text: She doesn't sleep. Four hours of meditation gives her the benefit of a long rest.
+  - name: Tavern Brawler
+    text: Sailor origin feat. Her unarmed strikes deal 1d4 + Str damage, she rerolls 1s on their damage dice, and once per turn a hit can push the target 5 ft. She is proficient with improvised weapons.
+actions:
+  - name: Multiattack
+    text: Kessa makes two melee attacks or two ranged attacks.
+  - name: Spear
+    text: 'Melee or ranged weapon attack: +6 to hit, reach 5 ft or range 20/60 ft, one target. Hit: 10 (2d6 + 3) piercing damage, or 12 (2d8 + 3) piercing damage if used with two hands to make a melee attack.'
+  - name: Rapier
+    text: 'Melee weapon attack: +7 to hit, reach 5 ft, one target. Hit: 8 (1d8 + 4) piercing damage.'
+  - name: Unarmed Strike
+    text: 'Melee attack: +6 to hit, reach 5 ft, one target. Hit: 5 (1d4 + 3) bludgeoning damage.'
+reactions:
+  - name: Parry
+    text: Kessa adds 3 to her AC against one melee attack that would hit her. She must see the attacker and be wielding a melee weapon.
+interactive:
+  hp: true
+  death_saves: true
+  conditions: true
+  hit_dice: true
+  uses:
+    - id: surge
+      label: Action Surge
+      max: 1
+      rest: short
+  short_rest: true
+  reset: true

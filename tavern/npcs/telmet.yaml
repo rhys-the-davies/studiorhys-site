@@ -1,0 +1,148 @@
+# Telmet Hicks
+# The id must match this file's name and must never change: table state in Supabase is stored against it.
+# See ../README.md for the full field reference.
+
+id: telmet
+name: Telmet Hicks
+short: Telmet
+portrait: portraits/telmet.jpg
+subtitle: Small humanoid (halfling), wizard, lawful good
+class: Wizard 6
+armour: None
+ac: 12
+hp:
+  max: 27
+  formula: 6d6 + 6
+hit_dice:
+  count: 6
+  die: d6
+speed: 30 ft
+proficiency: 3
+passive_perception: 13
+abilities:
+  str: 9
+  dex: 14
+  con: 12
+  int: 18
+  wis: 10
+  cha: 11
+saves:
+  str: -1
+  dex: 2
+  con: 1
+  int: 7
+  wis: 3
+  cha: 0
+save_proficiencies:
+  - int
+  - wis
+details:
+  - label: Skills
+    text: Arcana +7, History +7, Insight +3, Investigation +7, Perception +3, Religion +7
+  - label: Background
+    text: Scribe
+traits:
+  - name: Portent
+    text: After each long rest, roll two d20s and record them. Telmet can replace any d20 test made by her or a creature she can see with one of these rolls. She chooses before the roll, and only once per turn.
+  - name: Brave
+    text: She has advantage on saving throws to avoid or end the frightened condition.
+  - name: Halfling Nimbleness
+    text: She can move through the space of any creature that is a size larger than her.
+  - name: Naturally Stealthy
+    text: She can take the Hide action even when only obscured by a creature at least one size larger than her.
+  - name: Skilled
+    text: Scribe origin feat. Proficiency in Insight, Religion and cartographer's tools.
+actions:
+  - name: Dagger
+    text: 'Melee or ranged weapon attack: +5 to hit, reach 5 ft or range 20/60 ft, one target. Hit: 4 (1d4 + 2) piercing damage.'
+spellcasting:
+  summary: 6th-level wizard
+  ability: Intelligence
+  save_dc: 15
+  attack: '+7'
+  slots:
+    '1': 4
+    '2': 3
+    '3': 3
+  spells:
+    '1':
+      - name: Detect Magic
+        time: 1 action, ritual
+        range: Self
+        duration: Up to 10 min
+        concentration: true
+        text: Sense magic within 30 ft and see its aura and school.
+      - name: Mage Armour
+        time: 1 action
+        range: Touch
+        duration: 8 hours
+        sets_armour: true
+        text: An unarmoured creature's AC becomes 13 + Dex. Telmet's AC becomes 15.
+      - name: Shield
+        time: 1 reaction
+        range: Self
+        duration: 1 round
+        text: When hit by an attack or targeted by magic missile, gain +5 AC until the start of her next turn, including against the triggering attack. Magic missile does no damage to her.
+      - name: Identify
+        time: 1 minute, ritual
+        range: Touch
+        duration: Instant
+        text: Learn the properties of a magic item, or the spells affecting a creature or object.
+    '2':
+      - name: Locate Object
+        time: 1 action
+        range: Self
+        duration: Up to 10 min
+        concentration: true
+        text: Sense the direction of a familiar object, or the nearest object of a known kind, within 1,000 ft. Lead blocks it.
+      - name: Mind Spike
+        time: 1 action
+        range: 60 ft
+        duration: Up to 1 hour
+        concentration: true
+        text: The target makes a DC 15 Wisdom save, taking 3d8 psychic damage on a failure or half on a success. On a failure, Telmet always knows where it is while she concentrates. +1d8 per slot level above 2nd.
+    '3':
+      - name: Sending
+        time: 1 action
+        range: Unlimited
+        duration: 1 round
+        text: Send a message of up to 25 words to a creature Telmet knows. It hears her voice and can reply straight away.
+      - name: Tongues
+        time: 1 action
+        range: Touch
+        duration: 1 hour
+        text: The target understands any spoken language it hears, and anyone who knows a language understands it.
+    cantrips:
+      - name: Fire Bolt
+        time: 1 action
+        range: 120 ft
+        duration: Instant
+        text: Ranged spell attack, +7 to hit. 11 (2d10) fire damage. Unattended flammable objects ignite.
+      - name: Light
+        time: 1 action
+        range: Touch
+        duration: 1 hour
+        text: An object sheds bright light in a 20 ft radius and dim light for another 20 ft.
+      - name: Mage Hand
+        time: 1 action
+        range: 30 ft
+        duration: 1 min
+        text: A spectral hand manipulates objects up to 10 lb. It can't attack.
+      - name: Message
+        time: 1 action
+        range: 120 ft
+        duration: 1 round
+        text: Whisper a message to a creature in range. Only it hears, and it can whisper back.
+interactive:
+  hp: true
+  death_saves: true
+  conditions: true
+  hit_dice: true
+  concentration: true
+  spell_slots: true
+  mage_armour:
+    ac: 15
+    label: Mage Armour
+  portent: 2
+  short_rest: true
+  reset: true

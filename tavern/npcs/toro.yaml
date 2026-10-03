@@ -1,0 +1,175 @@
+# Toro
+# The id must match this file's name and must never change: table state in Supabase is stored against it.
+# See ../README.md for the full field reference.
+
+id: toro
+name: Toro
+short: Toro
+portrait: portraits/toro.jpg
+subtitle: Medium humanoid (copper dragonborn), wizard, neutral good
+class: Wizard 7
+armour: None
+ac: 9
+hp:
+  max: 40
+  formula: 7d6 + 14
+hit_dice:
+  count: 7
+  die: d6
+speed: 30 ft
+proficiency: 3
+passive_perception: 10
+abilities:
+  str: 10
+  dex: 8
+  con: 14
+  int: 20
+  wis: 10
+  cha: 8
+saves:
+  str: 0
+  dex: -1
+  con: 2
+  int: 8
+  wis: 3
+  cha: -1
+save_proficiencies:
+  - int
+  - wis
+details:
+  - label: Skills
+    text: Arcana +8, History +8, Insight +3, Investigation +8
+  - label: Resistance
+    text: Acid
+  - label: Background
+    text: Sage
+traits:
+  - name: Draconic Ancestry
+    text: Copper. Toro has resistance to acid damage.
+  - name: Darkvision
+    text: He sees in dim light within 60 ft as if it were bright light, and in darkness as if it were dim light.
+  - name: Draconic Flight
+    text: As a bonus action, Toro sprouts spectral wings and gains a flying speed of 30 ft for 10 minutes. Once per long rest.
+  - name: Magic Initiate
+    text: Sage origin feat. Toro knows Mending and Minor Illusion, and can cast Identify once per long rest without a slot.
+actions:
+  - name: Dagger
+    text: 'Melee or ranged weapon attack: +3 to hit, reach 5 ft or range 20/60 ft, one target. Hit: 2 (1d4) piercing damage.'
+  - name: Breath Weapon
+    text: When Toro takes the Attack action, he can replace an attack with a 15 ft cone or a 30 ft by 5 ft line of acid. Each creature in the area makes a DC 13 Dexterity save, taking 11 (2d10) acid damage on a failure or half on a success.
+spellcasting:
+  summary: 7th-level wizard
+  ability: Intelligence
+  save_dc: 16
+  attack: '+8'
+  slots:
+    '1': 4
+    '2': 3
+    '3': 3
+    '4': 1
+  spells:
+    '1':
+      - name: Detect Magic
+        time: 1 action, ritual
+        range: Self
+        duration: Up to 10 min
+        concentration: true
+        text: Sense magic within 30 ft and see its aura and school.
+      - name: Identify
+        time: 1 minute, ritual
+        range: Touch
+        duration: Instant
+        text: Learn the properties of a magic item, or the spells affecting a creature or object. Free once per long rest through Magic Initiate.
+      - name: Mage Armor
+        time: 1 action
+        range: Touch
+        duration: 8 hours
+        sets_armour: true
+        text: An unarmoured creature's AC becomes 13 + Dex. Toro's AC becomes 12.
+      - name: Chromatic Orb
+        time: 1 action
+        range: 90 ft
+        duration: Instant
+        text: Ranged spell attack, +8 to hit. 3d8 acid, cold, fire, lightning, poison or thunder damage. +1d8 per slot level above 1st.
+    '2':
+      - name: Misty Step
+        time: 1 bonus action
+        range: Self
+        duration: Instant
+        text: Teleport up to 30 ft to a space Toro can see.
+      - name: Invisibility
+        time: 1 action
+        range: Touch
+        duration: Up to 1 hour
+        concentration: true
+        text: A creature becomes invisible until the spell ends. It ends early for the target if it attacks, deals damage or casts a spell. One more target per slot level above 2nd.
+    '3':
+      - name: Counterspell
+        time: 1 reaction
+        range: 60 ft
+        duration: Instant
+        text: A creature casting a spell makes a DC 16 Constitution save. On a failure the spell fails and any slot used isn't spent.
+      - name: Fly
+        time: 1 action
+        range: Touch
+        duration: Up to 10 min
+        concentration: true
+        text: The target gains a flying speed of 60 ft. One more target per slot level above 3rd.
+    '4':
+      - name: Fabricate
+        time: 10 minutes
+        range: 120 ft
+        duration: Instant
+        text: 'Turn raw materials into finished goods: timber into a bridge, hemp into rope, flax into cloth. Up to a 10 ft cube, or a 5 ft cube of metal or stone. Fine work needs the matching tool proficiency.'
+    cantrips:
+      - name: Fire Bolt
+        time: 1 action
+        range: 120 ft
+        duration: Instant
+        text: Ranged spell attack, +8 to hit. 11 (2d10) fire damage. Unattended flammable objects ignite.
+      - name: Light
+        time: 1 action
+        range: Touch
+        duration: 1 hour
+        text: An object sheds bright light in a 20 ft radius and dim light for another 20 ft.
+      - name: Mage Hand
+        time: 1 action
+        range: 30 ft
+        duration: 1 min
+        text: A spectral hand manipulates objects up to 10 lb. It can't attack.
+      - name: Mending
+        time: 1 minute
+        range: Touch
+        duration: Instant
+        text: Repair a single break or tear in an object, such as a broken chain link or a torn sail, no larger than 1 ft in any dimension.
+      - name: Minor Illusion
+        time: 1 action
+        range: 30 ft
+        duration: 1 min
+        text: Create a sound or a still image of an object no larger than a 5 ft cube. An Investigation check against DC 16 reveals it.
+      - name: Prestidigitation
+        time: 1 action
+        range: 10 ft
+        duration: Up to 1 hour
+        text: 'Minor tricks: clean, chill, warm, flavour, light a candle, make a small mark or illusion.'
+interactive:
+  hp: true
+  death_saves: true
+  conditions: true
+  hit_dice: true
+  concentration: true
+  spell_slots: true
+  mage_armour:
+    ac: 12
+    label: Mage Armor
+  uses:
+    - id: breath
+      label: Breath Weapon
+      max: 3
+      rest: long
+    - id: flight
+      label: Draconic Flight
+      max: 1
+      rest: long
+  short_rest: true
+  reset: true
