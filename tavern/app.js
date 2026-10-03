@@ -11,8 +11,8 @@
 const CONFIG = {
   // Supabase dashboard > Project Settings > API Keys. Both values are public by design.
   // Never put the secret or service role key here.
-  supabaseUrl: "https://YOUR-PROJECT-REF.supabase.co",
-  supabaseKey: "sb_publishable_REPLACE_ME",
+  supabaseUrl: "https://gvfdgcsbevumdyhyxbjt.supabase.co",
+  supabaseKey: "sb_publishable_g8oQ4PnnLzsE5Eiy3uT49g_VM9dhhBi",
   yamlRefreshMs: 30000,
   retryMs: 20000,
 };
