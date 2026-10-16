@@ -6,6 +6,7 @@ id: toro
 name: Toro
 short: Toro
 portrait: portraits/toro-v2.jpg
+avatar: portraits/toro-v2-avatar.jpg
 subtitle: Medium humanoid (copper dragonborn), wizard, neutral good
 class: Wizard 7
 armour: None

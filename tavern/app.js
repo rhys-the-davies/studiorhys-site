@@ -114,6 +114,7 @@ const slotsLeft = (n, l) => Math.max(0, n.spellcasting.slots[l] - val(n.id, "slo
 const armourOn = n => !!(n.interactive.mage_armour && val(n.id, "armour", false));
 const acNow = n => armourOn(n) ? n.interactive.mage_armour.ac : n.ac;
 const hasSpells = n => !!(n && n.spellcasting);
+const avatarOf = n => n.avatar || n.portrait;   // small round images; falls back to the portrait
 const conSave = n => (n.saves && n.saves.con) || 0;
 
 /* ---------- Loading NPC YAML ---------- */
@@ -169,7 +170,7 @@ function renderUnlock(open){
 }
 function renderTabs(){
   $("tabs").innerHTML = NPCS.map(n => `<button class="tab" role="tab" id="tab-${n.id}" aria-selected="${n.id===current}" data-act="tab" data-id="${n.id}">
-      <img src="${esc(n.portrait)}" alt=""><span><span class="t-h2">${esc(n.name)}</span><span class="meta num">${npcHp(n)}/${n.hp.max} HP${npcTemp(n)?` +${npcTemp(n)}`:""}${val(n.id,"conc","")?` · ${esc(val(n.id,"conc",""))}`:""}</span></span></button>`).join("");
+      <img src="${esc(avatarOf(n))}" alt=""><span><span class="t-h2">${esc(n.name)}</span><span class="meta num">${npcHp(n)}/${n.hp.max} HP${npcTemp(n)?` +${npcTemp(n)}`:""}${val(n.id,"conc","")?` · ${esc(val(n.id,"conc",""))}`:""}</span></span></button>`).join("");
 }
 function renderNav(){
   const n = BY_ID[current];
@@ -178,13 +179,13 @@ function renderNav(){
   $("nav").innerHTML = panes.map(([k,l,svg]) => `<button data-act="pane" data-p="${k}" aria-current="${k===pane}"><svg viewBox="0 0 24 24" aria-hidden="true">${svg}</svg>${l}</button>`).join("");
 }
 function renderMenu(){
-  $("menu").innerHTML = NPCS.map(n => `<button data-act="tab" data-id="${n.id}" aria-current="${n.id===current}"><img src="${esc(n.portrait)}" alt=""><span><span class="t-h1">${esc(n.name)}</span><i class="num">${esc(n.class)} · ${npcHp(n)}/${n.hp.max} HP</i></span></button>`).join("");
+  $("menu").innerHTML = NPCS.map(n => `<button data-act="tab" data-id="${n.id}" aria-current="${n.id===current}"><img src="${esc(avatarOf(n))}" alt=""><span><span class="t-h1">${esc(n.name)}</span><i class="num">${esc(n.class)} · ${npcHp(n)}/${n.hp.max} HP</i></span></button>`).join("");
   $("menu").hidden = !menuOpen; $("scrim").hidden = !menuOpen;
   document.querySelectorAll(".burger").forEach(b => b.setAttribute("aria-expanded", menuOpen));
 }
 function miniHTML(n){
   const conc = val(n.id,"conc","");
-  return `<img src="${esc(n.portrait)}" alt=""><div class="mn"><span class="t-h1">${esc(n.short || n.name)}</span><i class="num">${npcHp(n)}/${n.hp.max} HP${npcTemp(n)?` +${npcTemp(n)}`:""} · AC ${acNow(n)}${conc?` · ${esc(conc)}`:""}</i></div>
+  return `<img src="${esc(avatarOf(n))}" alt=""><div class="mn"><span class="t-h1">${esc(n.short || n.name)}</span><i class="num">${npcHp(n)}/${n.hp.max} HP${npcTemp(n)?` +${npcTemp(n)}`:""} · AC ${acNow(n)}${conc?` · ${esc(conc)}`:""}</i></div>
     <button class="lockicon" data-act="${unlocked?"lock":"unlock-open"}" aria-label="${unlocked?"Lock this device":"Unlock to edit"}">${unlocked?ICON_OPEN:ICON_LOCK}</button>
     <button class="burger" data-act="menu" aria-label="Choose a character" aria-expanded="${menuOpen}">${ICON_MENU}</button>`;
 }
